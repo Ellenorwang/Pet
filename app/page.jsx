@@ -54,7 +54,7 @@ export default function Page() {
       ) : (
         <>
           <div className="grid grid-cols-2 gap-6">
-            {/* 用户部分 */}
+            {/* 用户部分 User Section */}
             <div>
               <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">Users</h2>
               <div className="space-y-4 mt-4">
@@ -81,7 +81,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* 宠物部分 */}
+            {/* 宠物部分 Pet Section */}
             <div>
               <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">Pets</h2>
               <div className="space-y-4 mt-4">
@@ -106,7 +106,7 @@ export default function Page() {
             </div>
           </div>
 
-          {/* 帖子部分 */}
+          {/* 帖子部分 Post Section */}
           <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">Recent Posts</h2>
           <ul className="mt-4 space-y-4">
             {posts.map((post, index) => (
@@ -121,7 +121,7 @@ export default function Page() {
             ))}
           </ul>
 
-          {/* 评论部分 */}
+          {/* 评论部分 Comment Section */}
           <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">Latest Comments</h2>
           <ul className="mt-4 space-y-4">
             {comments.map((comment, index) => (
