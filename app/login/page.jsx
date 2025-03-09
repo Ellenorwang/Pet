@@ -2,7 +2,7 @@
 import '../globals.css';
 import { useState } from 'react';
 import { useSignIn } from '@clerk/nextjs';
-import Link from "next/link";
+
 
 function Login() {
   const { signIn, setActive } = useSignIn();
@@ -17,23 +17,17 @@ function Login() {
       setError('Email and password are required.');
       return false;
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address.');
-      return false;
-    }
     return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(''); // Reset any previous error
+    setError(''); 
 
     if (!validateForm()) return;
 
     setLoading(true);
     try {
-      // Attempt to sign in using Clerk's signInWithEmailPassword method
       const signInAttempt = await signIn.create({
         identifier: email,
         password,
@@ -41,9 +35,12 @@ function Login() {
 
       if (signInAttempt.status === 'complete') {
         await setActive({ session: signInAttempt.createdSessionId });
-        
-        // Optionally redirect or update your UI after successful login
+        window.location.href = '/';
+
         // router.push('/home'); // You can redirect the user if needed
+
+        // can't seem to get the route/redirect to homepage to work after user logs in
+
       } else {
         setError('Invalid credentials or server error. Please try again.');
       }

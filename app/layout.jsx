@@ -34,9 +34,11 @@ export default function RootLayout({ children }) {
             <div className="flex gap-4">
               <SignedOut>
                 {/* Instead of Clerk's buttons, link to your custom login page */}
+
                 {/* <Link href="/login" className="px-4 py-2 bg-blue-500 text-white rounded-md">
                   Login
                 </Link> */}
+                
               </SignedOut>
               <SignedIn>
                 <UserButton />

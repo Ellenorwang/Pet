@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import client from "@/lib/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useUser } from "@clerk/nextjs";
 
 
 export default function Page() {
@@ -12,6 +13,8 @@ export default function Page() {
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const { user, isLoaded } = useUser();
 
   useEffect(() => {
     async function fetchData() {
@@ -48,6 +51,14 @@ export default function Page() {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gradient-to-br from-pink-100 to-blue-100 min-h-screen rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold text-center text-gray-800 pb-4">🐾 Pet Forum Dashboard 🐾</h1>
+
+      <div className="flex flex-col items-center justify-center">
+      {user ? (
+        <h1 className="text-2xl font-bold text-center text-purple-700">Welcome, {user.firstName}!</h1>
+      ) : (
+        <h1 className="hidden"></h1>
+      )}
+    </div>
 
       {loading ? (
         <p className="text-gray-500 text-center mt-5">Loading data...</p>
