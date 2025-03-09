@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSignIn } from '@clerk/nextjs';
 
 
+
 function Login() {
   const { signIn, setActive } = useSignIn();
   const [email, setEmail] = useState('');
@@ -52,7 +53,8 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className='w-full h-full flex flex-col items-center'>
+      <h1 className='my-6'>Login Page</h1>
     <form onSubmit={handleSubmit} className="m-4 p-10 border-1 border-gray-100 rounded-md shadow-lg max-w-sm">
       <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?q=80&w=3928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="PET logo" className='max-w-30 m-auto mb-10'/>
       <div className='flex flex-col'>

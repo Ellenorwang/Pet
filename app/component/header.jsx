@@ -27,6 +27,12 @@ export default function Header() {
           <Link href="/comments" className="text-gray-600 hover:text-gray-900 font-medium">Comments</Link>
 
           {user ? (
+        <Link href="/signup" className="text-gray-600 hover:text-gray-900 font-medium hidden">Sign Up</Link>
+      ) : (
+        <Link href="/signup" className="bg-green-600 text-white px-4 py-2 rounded-sm hover:bg-green-700 font-medium mr-4">Sign Up</Link>
+      )}
+
+          {user ? (
         <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium hidden">Log In</Link>
       ) : (
         <Link href="/login" className="bg-blue-500 text-white px-4 py-2 rounded-sm hover:bg-blue-600 font-medium">Log In</Link>
@@ -54,9 +60,15 @@ export default function Header() {
             <Link href="/comments" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Comments</Link>
 
             {user ? (
+        <Link href="/signup" className="text-gray-600 hover:text-gray-900 font-medium hidden">Sign Up</Link>
+      ) : (
+        <Link href="/signup" className="bg-green-600 text-white px-4 py-2 rounded-sm hover:bg-green-700 font-medium mr-4 w-30 text-center">Sign Up</Link>
+      )}
+
+            {user ? (
         <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium hidden">Log In</Link>
       ) : (
-        <Link href="/login" className="bg-blue-500 text-white px-4 py-2 rounded-sm hover:bg-blue-600 font-medium w-max">Log In</Link>
+        <Link href="/login" className="bg-blue-500 text-white px-4 py-2 rounded-sm hover:bg-blue-600 font-medium w-30 text-center">Log In</Link>
       )}
           </nav>
         </div>
