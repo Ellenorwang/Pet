@@ -23,6 +23,10 @@ export default function Header() {
           <Link href="/pets" className="text-gray-600 hover:text-gray-900 font-medium">Pets</Link>
           <Link href="/posts" className="text-gray-600 hover:text-gray-900 font-medium">Posts</Link>
           <Link href="/comments" className="text-gray-600 hover:text-gray-900 font-medium">Comments</Link>
+
+          {/* Temporary Log In Button */}
+          <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium">Log In</Link>
+
         </nav>
 
         {/* Mobile Menu Button */}
