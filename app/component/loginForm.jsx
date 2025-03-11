@@ -2,11 +2,10 @@
 import '../globals.css';
 import { useState } from 'react';
 import { useSignIn } from '@clerk/nextjs';
-import Logo from '../component/logo';
-import LoginForm from '../component/loginForm';
+import Logo from './logo';
 
 
-function Login() {
+function LoginForm() {
   const { signIn, setActive } = useSignIn();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,9 +38,6 @@ function Login() {
         await setActive({ session: signInAttempt.createdSessionId });
         window.location.href = '/';
 
-        // router.push('/home'); // You can redirect the user if needed
-
-        // can't seem to get the route/redirect to homepage to work after user logs in
 
       } else {
         setError('Invalid credentials or server error. Please try again.');
@@ -53,13 +49,39 @@ function Login() {
     setLoading(false);
   };
 
-  
   return (
     <div className='w-full h-full flex flex-col items-center'>
-        <h1 className='my-6'>Login Page</h1>
-        <LoginForm />
+    <form onSubmit={handleSubmit} className="m-4 p-10 border-1 border-gray-100 rounded-md shadow-lg max-w-sm">
+      
+      <Logo />
+      
+      <div className='flex flex-col'>
+        <label className='font-medium'>Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="bg-gray-100 p-2 rounded-md mb-4 mt-1"
+          placeholder="Enter your email"
+        />
+      </div>
+      <div className='flex flex-col'>
+        <label className='font-medium'>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="bg-gray-100 p-2 rounded-md mb-4 mt-1"
+          placeholder="Enter your password"
+        />
+      </div>
+      {error && <p className="error-message">{error}</p>}
+      <button type="submit" disabled={loading} className="w-full mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:shadow-lg cursor-pointer font-semibold">
+        {loading ? 'Logging in...' : 'Login'}
+      </button>
+    </form>
     </div>
   );
 }
 
-export default Login;
+export default LoginForm;

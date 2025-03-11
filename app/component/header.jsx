@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState } from "react";
-
+import Logo from "./logo";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +14,9 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50 w-full">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-gray-800 flex items-center space-x-2">
-          <span>🐾 Pet Forum</span>
-        </Link>
+
+        <Logo />
+
 
         {/* Navigation Links */}
         <nav className="hidden md:block space-x-6">
