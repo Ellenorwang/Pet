@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <body className="antialiased bg-gray-100">
 
           {/* Header with Custom Login */}
-          <header className="flex justify-between items-center p-4 bg-white shadow-md">
+          <header className="flex justify-between items-center p-2 bg-white shadow-md">
             <Header />
             <div className="flex gap-4">
               <SignedOut>
