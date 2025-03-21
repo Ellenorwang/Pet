@@ -1,26 +1,32 @@
 ## GOAL
 
-1. [ConfigureClerk]
+1. [ConfigureClerk] [x]
 
    - install clerk
    - set up keys
    - update middleware.ts
    - add ClerkProvider to app
 
-2. [createuser]
+2. [createuser] [x]
 
    - sign up
 
-3. [authenticationForLogin/logout]
+3. [authenticationForLogin/logout] [x]
 
    - signup
 
-4. [routeGuarding]
+4. [routeGuarding] [x]
 
    - block certain pages if authentication is not verified
    - redirect user to verify authentication
 
-5. [cleanUp]
+5. [HideSpecificComponents]
+
+   - implement public components
+   - implement authorized only components
+     for help look at [Permissions] under ## Resources
+
+6. [cleanUp]
    - componentization
    -
 
@@ -32,6 +38,7 @@
 
 1. [ClerkConfigurationGuide] ([<the url>](https://dashboard.clerk.com/apps/app_2ty01A9vTVD3LCrGLer2GEkRqXB/instances/ins_2ty01CNuXsJYtpKWEptuqdxDDUO))
 2. [RouteGuarding] ([<the url>](https://clerk.com/docs/references/nextjs/route-handlers))
+3. [Permissions] ([<the url>] (https://clerk.com/docs/organizations/verify-user-permissions))
 
 ## DEBUGGING
 
