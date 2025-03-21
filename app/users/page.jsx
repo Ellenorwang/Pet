@@ -8,14 +8,17 @@ const users = () => {
   const { userId, isSignedIn } = useAuth();
   const router = useRouter();
 
+  // This code is converted from the code in the auth() document
   useEffect(() => {
     if (!isSignedIn) {
-      router.push("/redirectedSignup"); // Redirect to sign-in page
+      router.push("/redirectedSignup");
+      // Redirect to sign-in page
     }
   }, [isSignedIn, router]);
 
   if (!isSignedIn) {
-    return <p>Redirecting...</p>; // Show a message while redirecting
+    return <p>Redirecting...</p>;
+    // Tells the user is redirecting to a new page
   }
 
   return (

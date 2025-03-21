@@ -19,14 +19,15 @@
 
    - block certain pages if authentication is not verified
    - redirect user to verify authentication
+   - implemented route guarding to all pages
 
-5. [HideSpecificComponents]
+5. [HideSpecificComponents] []
 
    - implement public components
    - implement authorized only components
      for help look at [Permissions] under ## Resources
 
-6. [cleanUp]
+6. [cleanUp] []
    - componentization
    -
 
@@ -47,6 +48,8 @@
     - had to create a signal as to why they were being sent back.
       a. added a redirecting text.
       b. added a different signup page to indicate that the user needs to be logged in before viewing.
+      c. converted the code in the auth() documentation to jsx because the documentation is for TS.
+      d. redirectToSignIn() doesnt work for jsx so the fix this we use router instead
     - to solve [theSecondProblem]
 
 ## DEPENDENCIES
