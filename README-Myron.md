@@ -35,9 +35,11 @@
 
 ## DEBUGGING
 
-1.  [theProblem]:
-    - steps
-    - you took
+1.  [redirecting]:
+    - made the user get sent back to the sign up page
+    - had to create a signal as to why they were being sent back.
+      a. added a redirecting text.
+      b. added a different signup page to indicate that the user needs to be logged in before viewing.
     - to solve [theSecondProblem]
 
 ## DEPENDENCIES
