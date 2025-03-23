@@ -21,10 +21,8 @@ export default function Header() {
         {/* Navigation Links */}
         <nav className="hidden md:block space-x-6">
           <Link href="/" className="text-gray-600 hover:text-gray-900 font-medium">Home</Link>
-          <Link href="/users" className="text-gray-600 hover:text-gray-900 font-medium">Users</Link>
-          <Link href="/pets" className="text-gray-600 hover:text-gray-900 font-medium">Pets</Link>
-          <Link href="/posts" className="text-gray-600 hover:text-gray-900 font-medium">Posts</Link>
-          <Link href="/comments" className="text-gray-600 hover:text-gray-900 font-medium">Comments</Link>
+          <Link href="/friends" className="text-gray-600 hover:text-gray-900 font-medium">Friends</Link>
+          <Link href="/feed" className="text-gray-600 hover:text-gray-900 font-medium">Feed</Link>
 
           {user ? (
         <Link href="/signup" className="text-gray-600 hover:text-gray-900 font-medium hidden">Sign Up</Link>

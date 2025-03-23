@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-const pets = () => {
+const posts = () => {
   const { userId, isSignedIn } = useAuth();
   const router = useRouter();
 
@@ -23,9 +23,9 @@ const pets = () => {
 
   return (
     <div>
-      <h1>Pets, </h1>
+      <h1>Content for feed page will go in here, such as posts and comments under each post.</h1>
     </div>
   );
 };
 
-export default pets;
+export default posts;

@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-const comments = () => {
+const users = () => {
   const { userId, isSignedIn } = useAuth();
   const router = useRouter();
 
@@ -23,9 +23,9 @@ const comments = () => {
 
   return (
     <div>
-      <h1>Comments </h1>
+      <h1>Content for Friends page will go here, such as Users and their Pets.</h1>
     </div>
   );
 };
 
-export default comments;
+export default users;
