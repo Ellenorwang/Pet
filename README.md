@@ -28,4 +28,10 @@ Post Feed: Displays recent posts from users.
 
 Comment Section: Shows user comments on various posts.
 
+Friends Section (New)
+The friends section displays a grid of user and pet avatars. Hovering over a card enlarges the image for better visibility. Clicking on a friend’s profile opens their detailed profile page.
+
+Explore Other Posts (New)
+This section features a grid of trending posts with dynamic background images fetched from Contentful. Each post card includes a hover effect that dims the background and highlights the post title. Clicking on a post opens the full content view.
+
 The development process began with planning and setup, where the architecture was defined, and Next.js was chosen for its server-side rendering benefits alongside Contentful for CMS integration. Component development followed, focusing on building reusable components for the dashboard and implementing a flexible API fetch mechanism using useEffect and client.getEntries().

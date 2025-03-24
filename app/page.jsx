@@ -85,7 +85,7 @@ export default function Page() {
       ) : (
         <>
           <div className="grid grid-cols-2 gap-6">
-            {/* 用户部分 User Section */}
+            {/* User Section */}
             <div>
               <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">
                 Users
@@ -121,7 +121,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* 宠物部分 Pet Section */}
+            {/* Pet Section */}
             <div>
               <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">
                 Pets
@@ -175,7 +175,7 @@ export default function Page() {
             ))}
           </ul>
 
-          {/* 评论部分 Comment Section */}
+          {/*  Comment Section */}
           <h2 className="mt-10 text-3xl font-semibold text-gray-700 border-b-2 border-gray-300 pb-2">
             Latest Comments
           </h2>
@@ -197,4 +197,4 @@ export default function Page() {
       )}
     </div>
   );
-}
+} 
