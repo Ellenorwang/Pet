@@ -36,22 +36,26 @@ if (!isLoaded || !user) {
 
   return (
     <div>
+
+        <DashboardContent />
+
      
           <h1 className="text-2xl font-bold text-center text-purple-700">
             {user.firstName}'s User Dashboard
           </h1>
 
 
-      <div className="flex">
-          <div className="w-1/4 border-1 border-amber-800 flex flex-col items-start p-4 gap-4">
+      <div className="flex gap-2 h-100">
+          <div className="w-1/4 border-1 border-gray-200 flex flex-col items-start p-2 pb-4 gap-4">
+          <button>Overview</button>
           <button>Profile</button>
           <button>Pets</button>
           <button>Notifications</button>
           <button>Privacy</button>
-          <button>Settings</button>
+          <button>Log Out</button>
           </div>
           
-          <div className="w-3/4 border-1 border-amber-800 flex flex-col justify-center items-center p-4">
+          <div className="w-3/4 border-1 border-gray-200 flex flex-col justify-center items-center p-4">
             <h1>HEY</h1>
           </div>
       </div>

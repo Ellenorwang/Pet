@@ -1,2 +1,68 @@
 @import "tailwindcss";
 
+/* button {
+    padding: 0.7rem;
+    margin-bottom: 5px;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    transition: all .1s;
+    color: #666666;
+    border-radius: .5rem;
+} */
+
+/* button:hover {
+    background-color: #f7f3ff;
+    cursor: pointer;
+    padding-left: 1rem;
+    color: black;
+} */
+
+.cl-userButtonPopoverFooter {
+    display: none;
+}
+
+.cl-footer {
+    display: none;
+}
+
+.cl-navbarButton {
+    margin-bottom: 3px;
+    font-weight: 400;
+}
+
+
+
+.cl-internal-1dauvpw {
+    display: none;
+}
+
+.cl-navbar {
+    background-color: #fff;
+    background: white;
+}
+
+.cl-internal-13u79ez {
+    /* display: none; */
+    background-image: none;
+    background-color: #f2e9ff;
+}
+
+.cl-active {
+    background-color: #eaddfc;
+    font-weight: 600;
+}
+
+.cl-button {
+    font-size: 1rem;
+}
+
+.cl-button:hover {
+    background-color: #f7f0ff;
+}
+
+.cl-modalBackdrop {
+    background-color: #35285050;
+    backdrop-filter: blur(3px);
+}

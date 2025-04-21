@@ -52,10 +52,8 @@ export default function Header() {
         <div className="md:hidden bg-white border-t shadow-md py-2">
           <nav className="flex flex-col space-y-4 px-6">
             <Link href="/" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link href="/users" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Users</Link>
-            <Link href="/pets" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Pets</Link>
-            <Link href="/posts" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Posts</Link>
-            <Link href="/comments" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Comments</Link>
+            <Link href="/friends" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Freinds</Link>
+            <Link href="/feed" className="text-gray-600 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Feed</Link>
 
             {user ? (
         <Link href="/signup" className="text-gray-600 hover:text-gray-900 font-medium hidden">Sign Up</Link>
